@@ -13,13 +13,13 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 
 1. **Clone this Repository**
    
-   ```git clone https://github.com/Bensake/OpenDeepSearch-Bensake.git
-   cd OpenDeepSearch-Bensake```
+   ```git clone https://github.com/Bensake/OpenDeepSearch-Bensake.git```
+   ``` cd OpenDeepSearch-Bensake```
    
 2. **Create and Activate a Virtual Environment**
 
-	```python -m venv venv
-   source venv/bin/activate```
+	```python -m venv venv```
+   ```source venv/bin/activate```
    
 3. **Install Python Requirements**   
 
@@ -49,7 +49,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 
 	Go to Ollama.ai and download a model that fits into your GPU memory. For example, if your GPU RAM is 8 GB, make sure the model size is under 8 GB.
 	
-	```ollama pull llama3.1:8b-instruct-q5_K_M``` # Change the model name to your desired model
+	```ollama pull llama3.1:8b-instruct-q5_K_M```      # Change the model name to your desired model
 
 10. **Set Model Name, System prompt, Max Sources**
 
@@ -61,8 +61,8 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 ## Usage	
 
 Once you adjust search_web.py based on your needs, you can use command prompt to execute searches:
-
-	```python search_web.py "your search query here"```
+	```bash	
+	 python search_web.py "your search query here"
 	
 ## Notes
 
