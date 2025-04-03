@@ -24,34 +24,37 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 3. **Install Python Requirements**   
 
 	```pip install -e .```
-	
-4. **Install Docker**	
+4. **Install Torch**
+   For Nvidia GPUs run:
+   	```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```    # Check you CUDA version (install if not present), cu121 stands for cuda 12.1
+   
+5. **Install Docker**	
 	
 	Download and install Docker from docker.com
 	
-5. **Run Docker**	
+6. **Run Docker**	
 
 	Start Docker Desktop, make sure it's running.
 	
-6. **Set Up SearXNG with Docker**
+7. **Set Up SearXNG with Docker**
 
 	```docker pull searxng/searxng```
 	
-7. **Run the SearXNG container**	
+8. **Run the SearXNG container**	
 
 	```docker run -d -p 8080:8080 searxng/searxng```
 	
-8. **Install Ollama**	
+9. **Install Ollama**	
 
 	Download and install Ollama from ollama.ai
 	
-9. **Download Ollama Model**	
+10. **Download Ollama Model**	
 
 	Go to Ollama.ai and download a model that fits into your GPU memory. For example, if your GPU RAM is 8 GB, make sure the model size is under 8 GB.
 	
 	```ollama pull llama3.1:8b-instruct-q5_K_M```      # Change the model name to your desired model
 
-10. **Set Model Name, System prompt, Max Sources**
+11. **Set Model Name, System prompt, Max Sources**
 
 	Open search_web.py and set:
 	model_name    to the Ollama model you downloaded
@@ -61,7 +64,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 ## Usage	
 
 Once you adjust search_web.py based on your needs, you can use command prompt to execute searches:
-	```bash	
+
 	 python search_web.py "your search query here"
 	
 ## Notes
