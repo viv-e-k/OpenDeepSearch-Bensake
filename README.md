@@ -28,7 +28,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
    For Nvidia GPUs run:
    		```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```
    
-   		 # Check you CUDA version (install if not present), cu121 stands for cuda 12.1
+   # Check you CUDA version (install if not present), cu121 stands for cuda 12.1
    
 6. **Install Docker**	
 	
