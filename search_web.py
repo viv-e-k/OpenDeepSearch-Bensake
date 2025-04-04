@@ -4,12 +4,12 @@ import argparse
 from opendeepsearch import OpenDeepSearchTool
 
 # Set environment variables for Ollama
-os.environ["LITELLM_MODEL_ID"] = "ollama/gemma3:27b"
+os.environ["LITELLM_MODEL_ID"] = "ollama/llama3.1:8b-instruct-q5_K_M"
 os.environ["OLLAMA_API_BASE"] = "http://localhost:11434"
 
 # Initialize OpenDeepSearchTool with pro mode and reranking
 search_agent = OpenDeepSearchTool(
-    model_name="ollama/gemma3:27b",
+    model_name="ollama/llama3.1:8b-instruct-q5_K_M",
     search_provider="searxng",
     searxng_instance_url="http://localhost:8080/",
     reranker="infinity",
