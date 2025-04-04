@@ -1,6 +1,6 @@
 # OpenDeepSearch - Local and Free - leveraging Ollama, SearXNG, Infinity-emb
 
-This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and summarize search results. Ollama allows for easy use of various LLMs locally. Custom system prompt was also added to control the presentation of search results (e.g. "conscise", "detailed", "summarized" or any other prompt). Fixed parameter issues. Added logs to see search results.
+This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and summarize search results. Ollama allows for easy use of various LLMs locally. Custom system prompt was also added to control the presentation of search results (e.g. "conscise", "detailed", "summarized" or any other prompt). Fixed several issues. Added logs to see search results.
 
 ## Prerequisites
 - Git
@@ -27,6 +27,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 4. **Install Torch**
    For Nvidia GPUs run:
    		```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```
+   
    		 # Check you CUDA version (install if not present), cu121 stands for cuda 12.1
    
 6. **Install Docker**	
