@@ -45,18 +45,22 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 9. **Run the SearXNG container**	
 
 		docker run -d -p 8080:8080 searxng/searxng
-	
-10. **Install Ollama**	
+
+11. **Copy Custom SearXNG Settings**
+
+		docker cp settings.yml searxng:/etc/searxng/settings.yml
+
+12. **Install Ollama**	
 
 	Download and install Ollama from ollama.ai
 	
-11. **Download Ollama Model**	
+13. **Download Ollama Model**	
 
 	Go to Ollama.ai and download a model that fits into your GPU memory. For example, if your GPU RAM is 8 GB, make sure the model size is under 8 GB.
 	
 		ollama pull llama3.1:8b-instruct-q5_K_M    # Change the model name to your desired model
 
-12. **Set Model Name, System prompt, Max Sources**
+14. **Set Model Name, System prompt, Max Sources**
 
 	Open search_web.py and set:
 
