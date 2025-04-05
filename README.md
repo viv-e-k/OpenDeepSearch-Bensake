@@ -26,9 +26,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 		pip install -e .
 4. **Install Torch**
    For Nvidia GPUs run:
-   		```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```
-   
-   	Check you CUDA version (install if not present), cu121 stands for cuda 12.1
+   		```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```  #Check you CUDA version (install if not present), cu121 stands for cuda 12.1
    
 6. **Install Docker**	
 	
@@ -48,7 +46,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 
 11. **Copy Custom SearXNG Settings**
 
-		docker cp settings.yml searxng:/etc/searxng/settings.yml
+		docker cp settings.yml searxng:/etc/searxng/settings.yml   # You might need to restart the container afterwards
 
 12. **Install Ollama**	
 
