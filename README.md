@@ -44,7 +44,7 @@ This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and s
 	
 9. **Run the SearXNG container**	
 
-		docker run -d -p 8080:8080 searxng/searxng
+		docker run -d --name searxng -p 8080:8080 searxng/searxng
 
 11. **Copy Custom SearXNG Settings**
 
